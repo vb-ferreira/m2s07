@@ -32,6 +32,7 @@ public class Paciente {
     @Column(nullable = false, unique = true)
     private String email;
 
+    @Column(nullable = false)
     private LocalDate dataNascimento;
 
     @ManyToOne
