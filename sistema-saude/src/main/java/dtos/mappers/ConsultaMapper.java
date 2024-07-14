@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 
 import dtos.ConsultaRequestDTO;
 import dtos.ConsultaResponseDTO;
-import dtos.ConsultasResponseDTO;
 import models.Consulta;
 
 @Component
