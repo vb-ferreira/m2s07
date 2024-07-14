@@ -25,6 +25,5 @@ public class NutricionistaMapper {
 		NutricionistaResponseDTO dto = mapper.map(entity, NutricionistaResponseDTO.class);
 		return dto;
 	}
-
-	
+		
 }

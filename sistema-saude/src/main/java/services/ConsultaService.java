@@ -1,5 +1,6 @@
 package services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.BeanUtils;
@@ -22,6 +23,10 @@ public class ConsultaService {
 	public Consulta buscarPorId(Long id) {
 		Optional<Consulta> opt = consultaRepository.findById(id);
 		return opt.get();
+	}
+	
+	public List<Consulta> buscarTodos() {
+		return consultaRepository.findAll();
 	}
 	
 	public Consulta alterar(Long id, Consulta consulta) {

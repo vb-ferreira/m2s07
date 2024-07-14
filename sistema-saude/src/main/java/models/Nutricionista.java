@@ -1,6 +1,10 @@
 package models;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -24,7 +28,13 @@ public class Nutricionista {
 
     @Column(nullable = false, unique = true)
     private String crn;
-
+    
+    @Column(nullable = false)
+    private int tempoExperiencia;
+    
+	@ElementCollection
+    private Set<String> certificacoes = new HashSet<>();
+    
 	public Long getId() {
 		return id;
 	}
@@ -57,4 +67,20 @@ public class Nutricionista {
 		this.crn = crn;
 	}
     
+    public int getTempoExperiencia() {
+		return tempoExperiencia;
+	}
+
+	public void setTempoExperiencia(int tempoExperiencia) {
+		this.tempoExperiencia = tempoExperiencia;
+	}
+
+	public Set<String> getCertificacoes() {
+		return certificacoes;
+	}
+
+	public void setCertificacoes(Set<String> certificacoes) {
+		this.certificacoes = certificacoes;
+	}
+
 }
